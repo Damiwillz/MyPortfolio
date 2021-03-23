@@ -1,0 +1,1127 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.lobster {
+    font-family: 'Lobster', cursive;
+    font-size: 92px;
+    text-transform: capitalize;
+    color:#CD2026;
+    font-weight: 400;
+}
+
+#home .header {
+    background-color: #FBFAFA;
+    margin: 15px;
+    border-radius: 40px;
+}
+
+#home .header .wrapper {
+    position: fixed;
+    top: 20px;
+    left: -40px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-135deg, #d10e00, #f0321d);
+    clip-path: circle(30px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+}
+
+#home .header #active:checked ~ .wrapper {
+    clip-path: circle(30%);
+    top: 0;
+    left: 0;
+}
+
+#home .header #active:checked ~ .menu-btn i::before {
+    content: "\f00d";
+    color: #d10e00;
+}
+
+#home .header input {
+    display: none
+}
+
+#home .header .wrapper {
+    z-index: 100;
+}
+
+#home .header .wrapper ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+
+#home .header .wrapper ul li {
+    margin: 15px 0;
+}
+
+#home .header .wrapper ul li a {
+    color: #fff5f5;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 500;
+    padding: 10px 40px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    line-height: 50px;
+}
+
+#home .header .wrapper ul li a::after {
+    content: "";
+    position: absolute;
+    left: 100px;
+    width: 100%;
+    height: 50px;
+    background: #fff5f5;
+    border-radius: 50px;
+    transform: scaleY(0);
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+#home .header .wrapper ul li a:hover::after {
+    transform: scaleY(1);
+    left: 0;
+}
+
+#home .header .wrapper ul li a:hover {
+    color: #f0321d;
+    z-index: 1;
+}
+
+#home .header .menu-btn {
+    position: fixed;
+    right: 60px;
+    top: 50px;
+    z-index: 200;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #fff5f5;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#home .header .logo {
+    width: 70px;
+    margin-left: 95px;
+    padding-top: 5px;
+}
+
+#home .header .logo img {
+    width: 100%;
+}
+
+#home .hero {
+    padding-top: 50px;
+}
+
+#home .hero .hello {
+    position: relative;
+}
+
+#home .hero .hello img {
+    position: absolute;
+    left: 0px;
+    top: 12px;
+    animation: hello 1s infinite;
+}
+
+@keyframes hello {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    45% {
+        transform: rotate(40deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+#home .hero .hello p {
+    font-size: 36px;
+    margin: 0 0 0 45px;
+    color: rgb(92, 92, 92);
+}
+
+#home .hero .hello .i {
+    font-size: 26px;
+    color: rgb(133, 133, 133);
+}
+
+#home .hero h2 {
+    font-size: 56px;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+#home .hero .aboutme {
+    position: relative;
+    width: 30%;
+}
+
+#home .hero .aboutme p {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(133, 133, 133);
+}
+
+#home .hero .aboutme img {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    max-width: 100%;
+    animation: down 1s infinite;
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(0px);
+    }
+
+    45% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#home .hero .aboutdetails {
+    color: #727C87;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+#home .hero .explore a {
+    color: black;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+#home .hero .social {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#home .hero .social, #home .hero .social p, #home .hero .social .icons {
+    display: inline-block;
+}
+
+#home .hero .social .icons i {
+    font-size: 22px;
+    padding: 14px 15px;
+    cursor: pointer;
+    background-color: #212121;
+    width: 50px;
+    height: 50px;
+    color: #FBFAFA;
+    border-radius: 50%;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+#home .hero .social .icons i:hover {
+    background-color: #FBFAFA;
+    color: #212121;
+}
+
+#home .hero .headsvg {
+    background: url(../../img/head.svg);
+    background-position: center left;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#home .hero .headsvg img {
+    width: 100%;
+}
+#home .hero .righthead .wrap {
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+
+#home .hero .righthead .wrap h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+#home .hero .righthead .wrap .heading {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#home .hero .righthead .wrap p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #555555;
+    text-align: left;
+}
+
+#home .hero .righthead .wrap .bg {
+    background-color: #DDED79;
+    height: 80px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: -1;
+    animation: bounce 1.4s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        border-radius: 30px;
+        width: 100px;
+    }
+
+    45% {
+        width: 160px;
+        border-radius: 0px;
+    }
+
+    100% {
+        border-radius: 30px;
+        width: 100px;
+    }
+}
+
+#home .hero .righthead .wrap .bg2 {
+    background-color: #FB9090;
+    height: 80px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: -1;
+    animation: bounce 1.4s infinite;
+}
+
+#home .hero .contact {
+    margin-top: 20px;
+}
+
+#home .hero .contact .contactdetails {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#home .hero .contact i {
+    font-size: 22px;
+    padding: 14px 15px;
+    cursor: pointer;
+    background-color: #212121;
+    width: 50px;
+    height: 50px;
+    color: #FBFAFA;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+#home .hero .contact .contactdetails .red {
+    color: #CD2026;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#home .hero .contact .contactdetails p{
+    margin: 0;
+}
+
+#services {
+    padding-top: 140px;
+}
+
+#services .heading {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+#services .heading h2 {
+    text-transform: capitalize;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#services .heading p {
+    text-align: center;
+    color: #727C87;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#services .explore a {
+    color: black;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+#services .servicecard {
+    padding-top: 80px;
+}
+
+#services .servicecard img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+#services .explore img {
+    width: initial;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+#services .servicecard h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#services .servicecard p {
+    color: #727C87;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#clients {
+    padding-top: 140px;
+}
+
+#clients .valuable p {
+    margin: 0;
+    color: #d10e00;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#clients .valuable {
+    margin-right: 10px;
+}
+
+#clients .valuable, #clients .client {
+    display: inline-block;
+}
+#clients .clp {
+    width: 80%;
+}
+
+#clients .clp p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+#clients .climg img {
+    width: 100%;
+}
+
+#clients {
+    padding-top: 140px;
+}
+
+#clients .heading {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+#clients .heading h2 {
+    text-transform: capitalize;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#clients .heading p {
+    text-align: center;
+    color: #727C87;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#clients .slider {
+    max-width: 1280px;
+    margin: 15px auto;
+    padding: 20px 0;
+}
+
+#clients .slick-slide img {
+    width: 100%;
+    padding: 0 10px;
+    z-index: 1;
+}
+
+#clients .slick-slide {
+    padding: 50px 0;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0.3;
+    transition: all 0.4s ease;
+}
+
+
+#clients .slick-current {
+    opacity: 1;
+    transform: scale(1.7);
+    z-index: 10;
+}
+
+
+#clients .slick-track .slick-active {
+    position: relative;
+}
+
+#clients .slider {
+    position: relative;
+}
+
+#clients .slider .prev-arrow {
+    position: absolute;
+    top: 43%;
+    left: 20%;
+    color: #fff5f5;
+    width: 60px;
+    height: 60px;
+    background: #d10e00;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    line-height: 62px;
+    font-size: 48px;
+    box-shadow: -2px 3px 21px -6px rgba(212,0,0,1);
+    z-index: 10;
+    cursor: pointer;
+}
+
+#clients .slider .next-arrow {
+    position: absolute;
+    top: 43%;
+    right: 20%;
+    color: #fff5f5;
+    width: 60px;
+    height: 60px;
+    background: #d10e00;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    line-height: 63px;
+    font-size: 48px;
+    box-shadow: -2px 3px 21px -6px rgba(212,0,0,1);
+    cursor: pointer;
+}
+
+#testimonial {
+    padding-top: 140px;
+}
+
+#testimonial .heading {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+#testimonial .heading h2 {
+    text-transform: capitalize;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#testimonial .heading p {
+    text-align: center;
+    color: #727C87;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#testimonial .testi-slider, #testimonial .single-testi {
+    height: 500px;
+}
+
+#testimonial .single-testi {
+    position: relative;
+    margin-top: 50px;
+}
+
+#testimonial .single-testi .bg-img {
+    background: url(../../img/eclipse.svg);
+    width: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#testimonial .single-testi .bg-img .banner-img {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#testimonial .single-testi .bg-img .img1 {
+    background-image: url(../../img/testimonial1.png);
+    width: 350px;
+    margin: auto;
+    max-width: 100%;
+    height: 400px;
+}
+
+#testimonial .single-testi .bg-img .img2 {
+    background-image: url(../../img/testimonial2.png);
+    width: 350px;
+    margin: auto;
+    max-width: 100%;
+    height: 400px;
+}
+
+#testimonial .single-testi .bg-img .img3 {
+    background-image: url(../../img/testimonial3.png);
+    width: 350px;
+    margin: auto;
+    max-width: 100%;
+    height: 400px;
+}
+
+#testimonial .testi-slider .single-testi .banner-text {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    text-align: left;
+    width: 40%;
+    transition: all 0.4s ease;
+}
+
+#testimonial .testi-slider .single-testi .banner-text p {
+    font-size: 18px;
+    color: #212121;
+    line-height: 36px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+#testimonial .testi-slider .single-testi .banner-text .name-pos h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+#testimonial .testi-slider .single-testi .banner-text .name-pos p {
+    font-size: 14px;
+    color: #0D1635;
+}
+
+#testimonial .slick-dots {
+    position: absolute;
+    bottom: 90px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 30%;
+    right: 20px;
+}
+
+#testimonial .slick-dots li {
+    position: relative;
+    display: inline-block;
+    margin: 0 25px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+#testimonial .slick-dots li button {
+    position: relative;
+    background-color: #d10e00;
+    opacity: 0.3;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+}
+
+#testimonial .slick-dots li.slick-active button {
+    color: #d10e00;
+    opacity: .9;
+}
+
+#testimonial .slick-dots li.slick-active button::before {
+    display: none;
+}
+
+#testimonial .slick-dots li button::before {
+    display: none;
+}
+
+#testimonial .slick-dots .slick-active {
+    border: 1px solid #d10e00;
+    border-radius: 50%;
+    text-align: -webkit-center;
+    padding: 4px;
+}
+
+
+#talk {
+    padding-top: 100px;
+}
+
+#talk .heading {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+#talk .heading h2 {
+    text-transform: capitalize;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#talk .heading p {
+    text-align: center;
+    color: #727C87;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#talk .lets {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#talk .lets a {
+    color: #212121;
+    font-size: 22px;
+}
+
+#footer {
+    background-color: #212121;
+    color: #FBFAFA;
+    padding: 10px 0;
+    margin-top: 60px;
+}
+
+#footer p {
+    margin-bottom: 0;
+    color: #727C87;
+}
+
+#footer .sicon i {
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 520px) {
+
+    .lobster {
+        font-size: 72px;
+        display: block;
+    }
+
+    #home .header .logo {
+        margin-left: 10px;
+    }
+
+    #home .header .menu-btn {
+        right: 30px;
+    }
+
+    #home .header .wrapper {
+        left: -10px;
+    }
+
+    #home .header .wrapper ul {
+        left: 50%;
+    }
+    #home .header .wrapper ul li a {
+        padding: 0;
+    }
+    #home .hero .hello {
+        text-align: center;
+    }
+    #home .hero .hello img {
+        left: 55px;
+    }
+    #home .hero h2 {
+        text-align: center;
+    }
+    #home .hero .aboutme {
+        width: 100%;
+    }
+    #home .hero .aboutme p {
+        text-align: center;
+    }
+    #home .hero .aboutme img {
+        right: 95px;
+    }
+    #home .hero .aboutdetails {
+        text-align: center;
+    }
+    #home .hero .explore {
+        text-align: center;
+    }
+    #home .hero .social {
+        padding: 25px 0;
+    }
+    #home .hero .social, #home .hero .social p, #home .hero .social .icons {
+        display: block;
+    }
+    #home .hero .righthead .wrap h2 {
+        text-align: left;
+    }
+    #home .hero .contact {
+        margin: 20px 0;
+    }
+
+
+    /* ===SERVICES=== */
+
+    #services {
+        padding-top: 60px;
+    }
+
+    #services .heading {
+        width: 100%;
+    }
+
+    #services .heading h2 {
+        margin-bottom: 10px;
+    }
+
+    #services .servicecard {
+        padding-top: 40px;
+    }
+
+    #services .servicecard img {
+        margin-top: 50px;
+    }
+
+    #services .explore img {
+        margin-top: 0;
+    }
+
+    /* ===CLIENTS=== */
+    #clients {
+        padding-top: 60px;
+    }
+
+    #clients .heading {
+        width: 100%;
+    }
+
+    #clients .heading h2 {
+        margin-bottom: 10px;
+    }
+
+    #clients .slick-slide {
+        padding: 80px 0;
+    }
+
+    #clients .hea {
+        text-align: center;
+    }
+
+    #clients .clp {
+        width: 100%;
+    }
+
+    #testimonial {
+        padding-top: 60px;
+    }
+
+    #testimonial .heading {
+        width: 100%;
+    }
+
+    #testimonial .single-testi .bg-img {
+        width: 100%;
+    }
+
+    #testimonial .testi-slider .single-testi .banner-text {
+        width: 80%;
+    }
+
+    #testimonial .testi-slider, #testimonial .single-testi {
+        height: 900px;
+    }
+
+    #testimonial .testi-slider .single-testi .banner-text {
+        top: 50%;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+
+    #testimonial .slick-dots {
+        bottom: 15px;
+    }
+
+    #talk .heading {
+        width: 100%;
+    }
+
+    #talk .heading h2 {
+        margin-bottom: 10px;
+    }
+
+    #footer .sicon i {
+        margin: 0;
+    }
+
+    #footer .name h2 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 340px) {
+
+    #home .header .logo {
+        margin-left: 10px;
+    }
+
+    #home .hero .hello img {
+        left: 35px;
+    }
+    #home .hero .aboutme img {
+        right: 70px;
+    }
+    #home .header .wrapper ul li a {
+        padding: 0;
+        font-size: 24px;
+    }
+    #home .header .wrapper ul {
+        left: 50%;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    #home .header .logo {
+        margin-left: 10px;
+    }
+
+    #home .hero .hello {
+        text-align: center;
+    }
+    #home .hero .hello img {
+        left: 36%;
+    }
+    #home .hero h2 {
+        text-align: center;
+    }
+    #home .hero .aboutme {
+        width: 100%;
+    }
+    #home .hero .aboutme p {
+        text-align: center;
+    }
+    #home .hero .aboutme img {
+        right: 40%;
+    }
+    #home .hero .aboutdetails {
+        text-align: center;
+    }
+    #home .hero .explore {
+        text-align: center;
+    }
+    #home .hero .social {
+        padding: 25px 0;
+    }
+    #home .hero .social, #home .hero .social p, #home .hero .social .icons {
+        display: block;
+    }
+    #home .hero .righthead {
+        text-align: center;
+        padding-top: 20px;
+    }
+    #home .hero .contact {
+        margin: 20px 0;
+    }
+    #home .hero .headsvg img {
+        width: 60%;
+    }
+    #home .hero .ipad-center {
+        text-align: center;
+    }
+    #home .hero .righthead .wrap .bg {
+        left: 40%;
+    }
+    #home .hero .righthead .wrap p {
+        text-align: center;
+        width: 50%;
+        margin: 10px auto;
+    }
+    #home .hero .righthead .wrap .bg2 {
+        left: 38%;
+    }
+    #home .hero .contact .contactdetails {
+        text-align: left;
+    }
+
+    /* ===SERVICES=== */
+
+    #services {
+        padding-top: 60px;
+    }
+
+    /* ===CLIENTS=== */
+
+    #clients {
+        padding-top: 60px;
+    }
+
+    #clients .hea {
+        text-align: center;
+    }
+
+    #clients .clp {
+        width: 100%;
+    }
+
+    #clients .climg {
+        text-align: center;
+    }
+
+    #clients .climg img {
+        width: 80%;
+    }
+
+    #testimonial {
+        padding-top: 60px;
+        background-color: #FBFAFA;
+    }
+}
+
+
+@media only screen and (min-width: 1480px) {
+    .container {
+        max-width: 88% !important;
+    }
+    #home .hero .hello p {
+        font-size: 44px;
+    }
+    #home .hero h2 {
+        font-size: 72px;
+    }
+    #home .hero .aboutdetails {
+        font-size: 22px;
+        line-height: 40px;
+    }
+    #home .hero .social {
+        padding: 200px 0 0 0;
+    }
+    #home .hero .explore a {
+        font-size: 20px;
+    }
+    #home .hero .social p {
+        font-size: 18px;
+    }
+    #home .hero .righthead .wrap p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #home .hero .contact {
+        margin-top: 170px;
+    }
+    #services .heading h2 {
+        font-size: 42px;
+    }
+    #services .heading p {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    #services .servicecard p {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    #services .servicecard h2 {
+        font-size: 32px;
+    }
+    #clients .heading h2 {
+        font-size: 42px;
+    }
+    #clients .heading p {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    #clients .valuable p {
+        font-size: 20px;
+    }
+    #clients .valuable h2 {
+        font-size: 38px;
+    }
+    #clients .clp p {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    #testimonial .heading h2 {
+        font-size: 42px;
+    }
+    #testimonial .single-testi .bg-img {
+        width: 50%;
+    }
+    #testimonial .heading p {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    #talk .heading h2 {
+        font-size: 42px;
+    }
+    #talk .heading p {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    #testimonial .single-testi .bg-img .img1 {
+        width: 380px;
+        height: 480px;
+    }
+    #testimonial .single-testi .bg-img .img2 {
+        width: 410px;
+        height: 450px;
+    }
+    #testimonial .single-testi .bg-img .img3 {
+        width: 420px;
+        height: 460px;
+    }
+}
