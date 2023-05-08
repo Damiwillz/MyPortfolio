@@ -19,6 +19,8 @@ function mySlick() {
         }]
     })
 }
+
+//  Animation
 mySlick();
 
 $(document).ready(function(){
